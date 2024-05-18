@@ -59,11 +59,11 @@ plugins in this file operate inside the "package" and "install" phases.
     </properties>
 
     <dependencies>
-        
+
         <!-- Flat look and feel.
         This is used by the demo classes.
-        Maven will automatically override this dependency if the FlatLAF library is used by a 
-        parent project. See also: 
+        Maven will automatically override this dependency if the FlatLAF library is used by a
+        parent project. See also:
         https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Transitive_Dependencies
         Maven FlatLAF link:
         https://mvnrepository.com/artifact/com.formdev/flatlaf -->
@@ -73,7 +73,7 @@ plugins in this file operate inside the "package" and "install" phases.
             <version>3.1.1</version>
         </dependency>
 
-        
+
         <!-- BeansBinding, This is only used in the data binding demo.
              uncomment this if you want to compile the data binding demo
         <dependency>
@@ -82,10 +82,10 @@ plugins in this file operate inside the "package" and "install" phases.
             <version>1.2.1</version>
         </dependency> -->
 
-        <!-- JUnit, https://mvnrepository.com/artifact/junit/junit 
-        Note: In the release packages, JUnit is not included and is not a dependency. 
-        During the packaging process, this pom file is replaced by "pom-for-users.txt", 
-        which does not include any JUnit dependency. 
+        <!-- JUnit, https://mvnrepository.com/artifact/junit/junit
+        Note: In the release packages, JUnit is not included and is not a dependency.
+        During the packaging process, this pom file is replaced by "pom-for-users.txt",
+        which does not include any JUnit dependency.
         -->
         <dependency>
             <groupId>junit</groupId>
@@ -131,7 +131,7 @@ plugins in this file operate inside the "package" and "install" phases.
                                 <id>deployinstall</id>
                                 <phase>install</phase>
                                 <configuration>
-                                    <tasks>
+                                    <target>
                                         <echo message = ">>>>>>>>>>>>>>>>>>>>>>>>>>>> install (deploy)"/>
                                         <delete file="${project.build.directory}/${project.artifactId}-${project.version}.pom.asc"/>
                                         <copy file="${project.build.directory}/pom-for-users.txt.asc" tofile="${project.build.directory}/${project.artifactId}-${project.version}.pom.asc"/>
@@ -139,7 +139,7 @@ plugins in this file operate inside the "package" and "install" phases.
                                         <delete file="${project.build.directory}/${project.artifactId}-${project.version}.jar.asc"/>
                                         <copy file="${project.build.directory}/${project.artifactId}-${project.version}-core.jar.asc" tofile="${project.build.directory}/${project.artifactId}-${project.version}.jar.asc"/>
                                         <copy file="${project.build.directory}/${project.artifactId}-${project.version}-core.jar.asc" tofile="${project.build.directory}/${project.artifactId}-${project.version}-executable-demo.jar.asc"/>
-                                    </tasks>
+                                    </target>
                                 </configuration>
                                 <goals>
                                     <goal>run</goal>
@@ -209,7 +209,7 @@ plugins in this file operate inside the "package" and "install" phases.
                     </compilerArgs>
                 </configuration>
             </plugin>
-            
+
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
@@ -327,10 +327,10 @@ plugins in this file operate inside the "package" and "install" phases.
                         <id>package</id>
                         <phase>package</phase>
                         <configuration>
-                            <tasks>
+                            <target>
                                 <echo message = ">>>>>>>>>>>>>>>>>>>>>>>>>>>>package"/>
                                 <copy file="${basedir}/target/classes/pom-for-users.txt" tofile="${project.build.directory}/pom-for-users.txt"/>
-                            </tasks>
+                            </target>
                         </configuration>
                         <goals>
                             <goal>run</goal>
@@ -340,7 +340,7 @@ plugins in this file operate inside the "package" and "install" phases.
                         <id>install</id>
                         <phase>install</phase>
                         <configuration>
-                            <tasks>
+                            <target>
                                 <echo message = ">>>>>>>>>>>>>>>>>>>>>>>>>>>>install"/>
                                 <delete file="${project.build.directory}/${project.artifactId}-${project.version}.pom"/>
                                 <copy file="${project.build.directory}/pom-for-users.txt" tofile="${project.build.directory}/${project.artifactId}-${project.version}.pom"/>
@@ -348,7 +348,7 @@ plugins in this file operate inside the "package" and "install" phases.
                                 <delete file="${project.build.directory}/${project.artifactId}-${project.version}.jar"/>
                                 <copy file="${project.build.directory}/${project.artifactId}-${project.version}-core.jar" tofile="${project.build.directory}/${project.artifactId}-${project.version}.jar"/>
                                 <copy file="${project.build.directory}/${project.artifactId}-${project.version}-core.jar" tofile="${project.build.directory}/${project.artifactId}-${project.version}-executable-demo.jar"/>
-                            </tasks>
+                            </target>
                         </configuration>
                         <goals>
                             <goal>run</goal>
