@@ -22,7 +22,7 @@
  */
 package com.github.lgooddatepicker;
 
-import com.github.lgooddatepicker.zinternaltools.Pair;
+import com.datepicker.zinternaltools.Pair;
 import java.lang.reflect.InvocationTargetException;
 import java.time.Clock;
 import java.time.LocalDate;

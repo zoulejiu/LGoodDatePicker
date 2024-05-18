@@ -25,6 +25,8 @@ package com.github.lgooddatepicker.components;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import com.datepicker.components.DatePicker;
+import com.datepicker.components.DatePickerSettings;
 import com.github.lgooddatepicker.TestHelpers;
 import java.awt.Color;
 import java.lang.reflect.InvocationTargetException;

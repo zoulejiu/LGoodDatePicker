@@ -24,9 +24,12 @@ package com.github.lgooddatepicker.components;
 
 import static org.junit.Assert.assertTrue;
 
+import com.datepicker.components.CalendarPanel;
+import com.datepicker.components.DatePicker;
+import com.datepicker.components.DatePickerSettings;
 import com.github.lgooddatepicker.TestHelpers;
-import com.github.lgooddatepicker.components.DatePickerSettings.DateArea;
-import com.github.lgooddatepicker.zinternaltools.HighlightInformation;
+import com.datepicker.components.DatePickerSettings.DateArea;
+import com.datepicker.zinternaltools.HighlightInformation;
 import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.lang.reflect.InvocationTargetException;

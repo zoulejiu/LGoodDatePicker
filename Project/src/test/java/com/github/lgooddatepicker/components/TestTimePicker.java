@@ -28,10 +28,12 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
+import com.datepicker.components.TimePicker;
+import com.datepicker.components.TimePickerSettings;
 import com.github.lgooddatepicker.TestHelpers;
-import com.github.lgooddatepicker.components.TimePickerSettings.TimeArea;
-import com.github.lgooddatepicker.optionalusertools.TimeChangeListener;
-import com.github.lgooddatepicker.zinternaltools.TimeChangeEvent;
+import com.datepicker.components.TimePickerSettings.TimeArea;
+import com.datepicker.optionalusertools.TimeChangeListener;
+import com.datepicker.zinternaltools.TimeChangeEvent;
 import java.awt.Color;
 import java.time.Clock;
 import java.time.LocalTime;

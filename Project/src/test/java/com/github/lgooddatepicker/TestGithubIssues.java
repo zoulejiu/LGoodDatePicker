@@ -26,9 +26,9 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import com.github.lgooddatepicker.TestHelpers.ExceptionInfo;
-import com.github.lgooddatepicker.components.CalendarPanel;
-import com.github.lgooddatepicker.components.DatePicker;
-import com.github.lgooddatepicker.components.DatePickerSettings;
+import com.datepicker.components.CalendarPanel;
+import com.datepicker.components.DatePicker;
+import com.datepicker.components.DatePickerSettings;
 import java.awt.AWTException;
 import java.awt.Color;
 import java.awt.event.InputEvent;
